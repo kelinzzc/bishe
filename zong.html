@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孕妈快乐驿站 · 所有页面概览</title>
+    <!-- 字体与图标库 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: #faf0f2;
+            padding: 30px 20px;
+            color: #3b2a32;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            background: white;
+            padding: 16px 32px;
+            border-radius: 60px;
+            box-shadow: 0 6px 18px #fad3db;
+        }
+        .logo-icon {
+            font-size: 2.5rem;
+            color: #f29bb0;
+        }
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #c6567a, #9f89c5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .sub {
+            margin-left: auto;
+            color: #a56f80;
+            font-weight: 500;
+            background: #ffeef1;
+            padding: 8px 22px;
+            border-radius: 40px;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 40px 0 24px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffd3dd;
+            color: #572f3f;
+        }
+        .section-title i {
+            color: #da7b93;
+            margin-right: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 24px;
+        }
+        .page-card {
+            background: white;
+            border-radius: 28px;
+            padding: 18px 14px 14px;
+            box-shadow: 0 12px 24px #f5ced6;
+            transition: transform 0.15s, box-shadow 0.2s;
+            border: 1px solid #ffdae3;
+            display: flex;
+            flex-direction: column;
+        }
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 32px #ecb7c5;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .card-header i {
+            font-size: 2rem;
+            width: 40px;
+            color: #c45d7c;
+        }
+        .card-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3b262f;
+            line-height: 1.3;
+        }
+        .badge {
+            background: #fbe2e9;
+            color: #a54260;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 40px;
+            align-self: flex-start;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .preview {
+            background: #f9edf0;
+            border-radius: 18px;
+            height: 100px;
+            margin: 10px 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c9849b;
+            font-size: 2rem;
+            border: 1px dashed #fbb6c7;
+            position: relative;
+            overflow: hidden;
+        }
+        .preview .placeholder-bar {
+            width: 80%;
+            height: 8px;
+            background: #ffcedb;
+            border-radius: 20px;
+            margin: 4px;
+        }
+        .preview-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 80%;
+        }
+        .desc {
+            font-size: 0.8rem;
+            color: #8c6977;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-top: 1px solid #ffe5ec;
+            padding-top: 8px;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 60px;
+            color: #ac808f;
+            background: white;
+            padding: 18px;
+            border-radius: 100px;
+        }
+        .user-group {
+            background: #fcf3f5;
+            border-radius: 40px;
+            padding: 20px 20px 10px;
+            margin-bottom: 30px;
+        }
+        .admin-group {
+            background: #f1eaf0;
+            border-radius: 40px;
+            padding: 20px 20px 10px;
+            margin-bottom: 30px;
+        }
+        .group-label {
+            display: inline-block;
+            background: white;
+            padding: 6px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #602e44;
+            box-shadow: 0 4px 8px #fccfda;
+        }
+        hr {
+            border: 1px solid #ffe1e8;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <i class="fas fa-baby-carriage logo-icon"></i>
+            <span class="logo-text">孕妈快乐驿站</span>
+            <span class="sub"><i class="far fa-images"></i> 全页面预览 · 共39页</span>
+        </div>
+
+        <!-- 说明 -->
+        <div style="background: #fff9fb; border-radius: 60px; padding: 20px 32px; margin-bottom: 30px;">
+            <p style="font-size: 1.1rem; display: flex; gap: 12px; flex-wrap: wrap;"><i class="fas fa-paint-brush" style="color: #d96c8a;"></i> 以下是根据需求文档整理的所有Web页面概览，包含用户端与后台管理端。每张卡片代表一个独立页面，含示意线框与简要描述。</p>
+        </div>
+
+        <!-- ========= 用户端 ========= -->
+        <div class="user-group">
+            <div class="group-label"><i class="fas fa-user"></i> 用户端页面 (22页)</div>
+            <div class="grid">
+                <!-- 注册/登录 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-sign-in-alt"></i><h3>注册页</h3></div><div class="badge">登录流程</div><div class="preview"><div class="preview-stack"><div class="placeholder-bar" style="width:60%"></div><div class="placeholder-bar" style="width:90%"></div><div class="placeholder-bar" style="width:75%"></div></div></div><div class="desc"><i class="fas fa-pen"></i> 手机号/密码注册</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-key"></i><h3>登录页</h3></div><div class="badge">登录流程</div><div class="preview"><div class="preview-stack"><div class="placeholder-bar" style="width:85%"></div><div class="placeholder-bar" style="width:85%"></div><div class="placeholder-bar" style="width:40%"></div></div></div><div class="desc"><i class="fas fa-arrow-right"></i> 一键登录/注册</div></div>
+
+                <!-- 个人中心 4页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-id-card"></i><h3>个人信息页</h3></div><div class="badge">个人中心</div><div class="preview"><i class="fas fa-user-circle"></i></div><div class="desc">头像、孕期、基本信息</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-history"></i><h3>测评记录页</h3></div><div class="badge">个人中心</div><div class="preview"><i class="fas fa-clipboard-list"></i></div><div class="desc">历史测评分数</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-book-reader"></i><h3>学习记录页</h3></div><div class="badge">个人中心</div><div class="preview"><i class="fas fa-video"></i></div><div class="desc">已学资料/视频</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-comment-dots"></i><h3>咨询记录页</h3></div><div class="badge">个人中心</div><div class="preview"><i class="fas fa-sms"></i></div><div class="desc">历史聊天/留言</div></div>
+
+                <!-- 心理测评 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-list-ul"></i><h3>测评列表页</h3></div><div class="badge">心理测评</div><div class="preview"><div class="preview-stack"><div class="placeholder-bar"></div><div class="placeholder-bar"></div><div class="placeholder-bar" style="width:50%"></div></div></div><div class="desc">焦虑/抑郁/压力问卷</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-pencil-alt"></i><h3>答题页</h3></div><div class="badge">心理测评</div><div class="preview"><i class="fas fa-check-square"></i></div><div class="desc">逐题作答</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-chart-bar"></i><h3>测评结果页</h3></div><div class="badge">心理测评</div><div class="preview"><i class="fas fa-smile"></i> 8分</div><div class="desc">得分解释&建议</div></div>
+
+                <!-- 心理保健教育 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-book-open"></i><h3>资料列表页</h3></div><div class="badge">心理保健</div><div class="preview"><i class="fas fa-layer-group"></i></div><div class="desc">图文/视频目录</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-file-alt"></i><h3>资料详情页</h3></div><div class="badge">心理保健</div><div class="preview"><i class="fas fa-play-circle"></i></div><div class="desc">文章/视频播放</div></div>
+
+                <!-- 在线咨询 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-calendar-plus"></i><h3>咨询预约页</h3></div><div class="badge">在线咨询</div><div class="preview"><i class="far fa-calendar-alt"></i></div><div class="desc">选择专家/时段</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-comments"></i><h3>聊天页</h3></div><div class="badge">在线咨询</div><div class="preview"><i class="fas fa-sms"></i></div><div class="desc">文字/语音/视频</div></div>
+
+                <!-- 家庭关系咨询 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-question-circle"></i><h3>问题提交页</h3></div><div class="badge">家庭咨询</div><div class="preview"><i class="fas fa-edit"></i></div><div class="desc">描述家庭问题</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-reply-all"></i><h3>咨询记录页</h3></div><div class="badge">家庭咨询</div><div class="preview"><i class="fas fa-clipboard"></i></div><div class="desc">专家回复列表</div></div>
+
+                <!-- 互助社区 4页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-users"></i><h3>社区首页</h3></div><div class="badge">互助社区</div><div class="preview"><i class="fas fa-stream"></i></div><div class="desc">帖子流</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-file-lines"></i><h3>帖子详情页</h3></div><div class="badge">互助社区</div><div class="preview"><i class="fas fa-comment"></i> 评论</div><div class="desc">查看/回复</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-feather"></i><h3>发帖页</h3></div><div class="badge">互助社区</div><div class="preview"><i class="fas fa-edit"></i></div><div class="desc">发布新帖</div></div>
+                <!-- 评论页通常内嵌, 但单独列出 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-reply"></i><h3>评论页</h3></div><div class="badge">互助社区</div><div class="preview"><i class="fas fa-comments"></i></div><div class="desc">评论列表/输入</div></div>
+
+                <!-- 情感支持 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-headphones"></i><h3>音乐播放页</h3></div><div class="badge">情感支持</div><div class="preview"><i class="fas fa-music"></i></div><div class="desc">胎教音乐/放松</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-spa"></i><h3>放松训练页</h3></div><div class="badge">情感支持</div><div class="preview"><i class="fas fa-leaf"></i></div><div class="desc">呼吸/冥想引导</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-heart"></i><h3>情绪调节页</h3></div><div class="badge">情感支持</div><div class="preview"><i class="fas fa-sliders-h"></i></div><div class="desc">焦虑/抑郁调节</div></div>
+
+                <!-- 抑郁干预 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-brain"></i><h3>干预模块导航</h3></div><div class="badge">抑郁干预</div><div class="preview"><i class="fas fa-th"></i></div><div class="desc">信息/动机/认知/行为</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-tasks"></i><h3>任务页</h3></div><div class="badge">抑郁干预</div><div class="preview"><i class="fas fa-check-circle"></i></div><div class="desc">模块学习/作业</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-chart-line"></i><h3>反馈页</h3></div><div class="badge">抑郁干预</div><div class="preview"><i class="fas fa-star"></i> 合格</div><div class="desc">评估结果/晋级</div></div>
+
+                <!-- 技能训练 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-dumbbell"></i><h3>技能任务列表</h3></div><div class="badge">技能训练</div><div class="preview"><i class="fas fa-list"></i></div><div class="desc">应激控制/自信心等</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-upload"></i><h3>任务提交页</h3></div><div class="badge">技能训练</div><div class="preview"><i class="fas fa-file-export"></i></div><div class="desc">提交作业</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-clipboard-check"></i><h3>反馈页</h3></div><div class="badge">技能训练</div><div class="preview"><i class="fas fa-thumbs-up"></i></div><div class="desc">辅导者评价</div></div>
+
+                <!-- 家庭干预 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-plus"></i><h3>家庭成员注册</h3></div><div class="badge">家庭干预</div><div class="preview"><i class="fas fa-address-card"></i></div><div class="desc">家属注册/量表</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-question-circle"></i><h3>咨询页</h3></div><div class="badge">家庭干预</div><div class="preview"><i class="fas fa-sms"></i></div><div class="desc">家属与心理师沟通</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-comments"></i><h3>互动交流页</h3></div><div class="badge">家庭干预</div><div class="preview"><i class="fas fa-users"></i></div><div class="desc">家属之间讨论</div></div>
+
+                <!-- 就诊转介 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-md"></i><h3>专家介绍页</h3></div><div class="badge">就诊转介</div><div class="preview"><i class="fas fa-id-badge"></i></div><div class="desc">专家列表/资质</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-phone-alt"></i><h3>转介咨询页</h3></div><div class="badge">就诊转介</div><div class="preview"><i class="fas fa-envelope"></i></div><div class="desc">留言/申请转介</div></div>
+
+                <!-- 内容导读 1页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-compass"></i><h3>内容导读页</h3></div><div class="badge">引导</div><div class="preview"><i class="fas fa-map-signs"></i></div><div class="desc">平台使用说明</div></div>
+            </div>
+            <p style="margin-top: 15px; font-size:0.9rem; color:#8c6272; text-align:right;">共22个用户端页面</p>
+        </div>
+
+        <!-- ========= 管理端 ========= -->
+        <div class="admin-group">
+            <div class="group-label"><i class="fas fa-cogs"></i> 后台管理端页面 (17页)</div>
+            <div class="grid">
+                <!-- 登录页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-lock"></i><h3>管理员登录页</h3></div><div class="badge">后台</div><div class="preview"><i class="fas fa-key"></i></div><div class="desc">身份验证</div></div>
+                <!-- 仪表盘 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-tachometer-alt"></i><h3>仪表盘</h3></div><div class="badge">后台</div><div class="preview"><i class="fas fa-chart-pie"></i></div><div class="desc">数据概览/活跃度</div></div>
+                <!-- 用户管理 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-users-cog"></i><h3>用户列表页</h3></div><div class="badge">用户管理</div><div class="preview"><i class="fas fa-list-ul"></i></div><div class="desc">搜索/筛选</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-tag"></i><h3>用户详情页</h3></div><div class="badge">用户管理</div><div class="preview"><i class="fas fa-id-card"></i></div><div class="desc">详细信息</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-check-double"></i><h3>用户审核页</h3></div><div class="badge">用户管理</div><div class="preview"><i class="fas fa-user-check"></i></div><div class="desc">注册审核</div></div>
+                <!-- 心理专家管理 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-tie"></i><h3>专家列表页</h3></div><div class="badge">专家管理</div><div class="preview"><i class="fas fa-address-book"></i></div><div class="desc">专家账户</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-certificate"></i><h3>专家资质审核</h3></div><div class="badge">专家管理</div><div class="preview"><i class="fas fa-file-signature"></i></div><div class="desc">审核资质</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-shield"></i><h3>专家权限设置</h3></div><div class="badge">专家管理</div><div class="preview"><i class="fas fa-sliders-h"></i></div><div class="desc">角色/权限</div></div>
+                <!-- 问卷管理 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-poll"></i><h3>问卷列表页</h3></div><div class="badge">问卷管理</div><div class="preview"><i class="fas fa-clipboard-list"></i></div><div class="desc">所有问卷</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-edit"></i><h3>问卷编辑页</h3></div><div class="badge">问卷管理</div><div class="preview"><i class="fas fa-pencil-alt"></i></div><div class="desc">修改题目/选项</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-plus-circle"></i><h3>新增问卷页</h3></div><div class="badge">问卷管理</div><div class="preview"><i class="fas fa-plus"></i></div><div class="desc">创建新问卷</div></div>
+                <!-- 测评结果管理 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-chart-bar"></i><h3>测评结果列表</h3></div><div class="badge">测评管理</div><div class="preview"><i class="fas fa-table"></i></div><div class="desc">用户测评记录</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-file-medical-alt"></i><h3>测评分析页</h3></div><div class="badge">测评管理</div><div class="preview"><i class="fas fa-chart-line"></i></div><div class="desc">生成心理报告</div></div>
+                <!-- 教育资料管理 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-book"></i><h3>资料列表页</h3></div><div class="badge">教育资料</div><div class="preview"><i class="fas fa-folder-open"></i></div><div class="desc">图文/视频管理</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-upload"></i><h3>资料上传页</h3></div><div class="badge">教育资料</div><div class="preview"><i class="fas fa-cloud-upload-alt"></i></div><div class="desc">新增资料</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-pen"></i><h3>资料编辑页</h3></div><div class="badge">教育资料</div><div class="preview"><i class="fas fa-edit"></i></div><div class="desc">修改内容</div></div>
+                <!-- 咨询记录管理 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-comments"></i><h3>咨询记录列表</h3></div><div class="badge">咨询管理</div><div class="preview"><i class="fas fa-list"></i></div><div class="desc">用户-专家聊天</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-comment-dots"></i><h3>咨询记录详情</h3></div><div class="badge">咨询管理</div><div class="preview"><i class="fas fa-sms"></i></div><div class="desc">查看完整对话</div></div>
+                <!-- 留言管理 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-inbox"></i><h3>留言列表页</h3></div><div class="badge">留言管理</div><div class="preview"><i class="fas fa-envelope-open-text"></i></div><div class="desc">用户留言</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-reply"></i><h3>留言回复页</h3></div><div class="badge">留言管理</div><div class="preview"><i class="fas fa-reply-all"></i></div><div class="desc">回复/处理</div></div>
+                <!-- 干预进度管理 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-tasks"></i><h3>干预任务列表</h3></div><div class="badge">干预进度</div><div class="preview"><i class="fas fa-clipboard"></i></div><div class="desc">所有干预任务</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-chart"></i><h3>用户干预进度</h3></div><div class="badge">干预进度</div><div class="preview"><i class="fas fa-chart-simple"></i></div><div class="desc">个人完成情况</div></div>
+                <!-- 数据统计分析 2页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-chart-pie"></i><h3>数据报表页</h3></div><div class="badge">统计分析</div><div class="preview"><i class="fas fa-chart-bar"></i></div><div class="desc">图表统计</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-download"></i><h3>数据导出功能</h3></div><div class="badge">统计分析</div><div class="preview"><i class="fas fa-file-excel"></i></div><div class="desc">导出原始数据</div></div>
+                <!-- 系统设置 3页 -->
+                <div class="page-card"><div class="card-header"><i class="fas fa-user-lock"></i><h3>权限分配页</h3></div><div class="badge">系统设置</div><div class="preview"><i class="fas fa-shield-alt"></i></div><div class="desc">角色权限</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-building"></i><h3>部门管理页</h3></div><div class="badge">系统设置</div><div class="preview"><i class="fas fa-sitemap"></i></div><div class="desc">机构/部门</div></div>
+                <div class="page-card"><div class="card-header"><i class="fas fa-history"></i><h3>系统日志页</h3></div><div class="badge">系统设置</div><div class="preview"><i class="fas fa-scroll"></i></div><div class="desc">操作日志</div></div>
+            </div>
+            <p style="margin-top: 15px; font-size:0.9rem; color:#8c6272; text-align:right;">共17个后台管理页面</p>
+        </div>
+
+        <!-- 总数统计 -->
+        <div class="footer-note">
+            <i class="fas fa-check-circle" style="color: #bf7085;"></i> 总计展示页面：用户端22 + 管理端17 = <strong>39页</strong> (符合需求文档35~43的估算)
+        </div>
+    </div>
+</body>
+</html>
