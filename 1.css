@@ -94,6 +94,13 @@
     color: #b58794;
     margin-left: 4px;
     font-size: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.chevron:hover{
+    transform: scale(1.05);
+    color: #d96c8a;
 }
 
 .welcome-card {
@@ -154,6 +161,7 @@
     gap: 18px;
     transition: all 0.2s ease;
     border: 1px solid #ffe3e8;
+    cursor: pointer;
 }
 
 .stat-item:hover {
@@ -196,5 +204,69 @@
 .stat-tip {
     font-size: 0.8rem;
     color: #ba8695;
+    margin-top: 4px;
+}
+
+/*模块部分*/
+
+.section-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 28px 0 20px;
+}
+
+.section-title h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4b2b36;
+}
+
+.section-title a {
+    color: #b16c80;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.quick-card {
+    background: white;
+    border-radius: 28px;
+    padding: 22px 8px 16px;
+    text-align: center;
+    box-shadow: 0 8px 18px #f3d4db;
+    transition: 0.2s;
+    border: 1px solid #ffe4ea;
+    cursor: pointer;
+}
+
+.quick-card:hover {
+    background-color: #fff2f5;
+    transform: scale(1.02);
+    border-color: #feb4c3;
+}
+
+.quick-icon {
+    font-size: 2.6rem;
+    color: #da7e95;
+    margin-bottom: 12px;
+}
+
+.quick-card span {
+    display: block;
+    font-weight: 500;
+    color: #4b2b36;
+    font-size: 0.95rem;
+}
+
+.quick-card .sub-tag {
+    font-size: 0.7rem;
+    color: #b38b96;
     margin-top: 4px;
 }
