@@ -1,0 +1,95 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/register/register",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "孕妈快乐驿站"
+			}
+    },
+    {
+      "path": "pages/evaluation/evaluation",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/testing/testing",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/music/music",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/music-player/music-player",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/health-articles/health-articles",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/article/article",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/expert/expert",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/community/community",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/personal-center/personal-center",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/personal-center/update-password",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    },
+    {
+      "path": "pages/personal-center/profile",
+      "style": {
+        "navigationBarTitleText": "孕妈快乐驿站"
+      }
+    }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "孕妈快乐驿站",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
